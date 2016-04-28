@@ -1,8 +1,8 @@
 # inherit from the proprietary version
--include vendor/kingzone/k1_turbo/BoardConfigVendor.mk
+-include vendor/huawei/hwg750-t00/BoardConfigVendor.mk
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/kingzone/k1_turbo/include
+TARGET_SPECIFIC_HEADER_PATH := device/huawei/hwg750-t00/include
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6592
@@ -34,15 +34,15 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1468006400
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 5452595200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/kingzone/k1_turbo/kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/kingzone/k1_turbo/bootimg.mk
+TARGET_PREBUILT_KERNEL := device/huawei/hwg750-t00/kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/huawei/hwg750-t00/bootimg.mk
 BOARD_MKBOOTIMG_ARGS := --board 1419997733
 BOARD_CUSTOM_BOOTIMG := true
 
 TARGET_KMODULES := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := k1_turbo,htt92_wet_jb9
+TARGET_OTA_ASSERT_DEVICE := hwg750-t00,htt92_wet_jb9
 
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -51,7 +51,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # EGL
-BOARD_EGL_CFG := device/kingzone/k1_turbo/configs/egl.cfg
+BOARD_EGL_CFG := device/huawei/hwg750-t00/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -65,7 +65,7 @@ COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/kingzone/k1_turbo/ril/
+BOARD_RIL_CLASS := ../../../device/huawei/hwg750-t00/ril/
 
 BOARD_CONNECTIVITY_VENDOR := MediaTek
 BOARD_CONNECTIVITY_MODULE := conn_soc
@@ -85,13 +85,13 @@ WIFI_DRIVER_FW_PATH_P2P:=P2P
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/kingzone/k1_turbo/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/hwg750-t00/bluetooth
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # CWM
-TARGET_RECOVERY_FSTAB := device/kingzone/k1_turbo/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/huawei/hwg750-t00/rootdir/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP
@@ -112,7 +112,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
 BOARD_SEPOLICY_DIRS := \
-       device/kingzone/k1_turbo/sepolicy
+       device/huawei/hwg750-t00/sepolicy
 
 # Use old sepolicy version
 POLICYVERS := 26

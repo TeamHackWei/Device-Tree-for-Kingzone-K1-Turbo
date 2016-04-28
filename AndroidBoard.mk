@@ -5,4 +5,4 @@ include $(CLEAR_VARS)
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
 # include the non-open-source counterpart to this file
--include vendor/kingzone/k1_turbo/AndroidBoardVendor.mk
+-include vendor/huawei/hwg750-t00/AndroidBoardVendor.mk
