@@ -1,5 +1,5 @@
 # inherit from the proprietary version
--include vendor/huawei/hwg750-t00/BoardConfigVendor.mk
+-include vendor/huawei/hwg750-t00/BoardConfigVendor.m
 
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/huawei/hwg750-t00/include
