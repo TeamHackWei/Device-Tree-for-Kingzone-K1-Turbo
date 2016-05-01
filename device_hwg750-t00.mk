@@ -4,11 +4,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/kingzone/k1_turbo/k1_turbo-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/hwg750-t00/hwg750-t00-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/kingzone/k1_turbo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/huawei/hwg750-t00/overlay
 
-LOCAL_PATH := device/kingzone/k1_turbo
+LOCAL_PATH := device/huawei/g750-t00
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -148,10 +148,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_k1_turbo
-PRODUCT_DEVICE := k1_turbo
+PRODUCT_NAME := full_hwg750_t00
+PRODUCT_DEVICE := hwg750_t00
 
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
